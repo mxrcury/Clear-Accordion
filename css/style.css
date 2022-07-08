@@ -1,0 +1,90 @@
+@import url("../fonts/SFPRODISPLAYREGULAR.OTF");
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.48px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 30px;
+}
+
+.accordion {
+  margin-bottom: 10px;
+}
+.accordion:last-child {
+  margin-bottom: 0;
+}
+.accordion.active .accordion__arrow::before {
+  transform: translateX(-15px) rotate(-132deg);
+  background: #f6a944;
+}
+.accordion.active .accordion__arrow::after {
+  background: #f6a944;
+  transform: translateX(-5px) rotate(135deg);
+}
+.accordion__btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.accordion__caption {
+  font-size: 24px;
+}
+.accordion__desc {
+  max-height: 600px;
+}
+.accordion__arrow {
+  position: relative;
+}
+.accordion__arrow::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  display: block;
+  background: #2f2f2f;
+  transform: translateX(-15px) rotate(-42deg);
+  transition: .3s ease;
+}
+.accordion__arrow::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  display: block;
+  background: #2f2f2f;
+  transform: translateX(-5px) rotate(41deg);
+  transition: .3s ease;
+}
+
+.content {
+  transition: .3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
